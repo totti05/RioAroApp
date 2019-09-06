@@ -1,18 +1,3 @@
-<?php 
-namespace App\views;
-
-use App\Models\banco;
-if(!empty($_POST)){
-$banco = new banco();
-$banco->nombre_banco = $_POST['nombre_banco'];
-$banco->rif = $_POST['rif'];
-$banco->save();
-
-}
-
-
-?>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -20,7 +5,7 @@ $banco->save();
     <meta charset="utf-8">
     <meta autor = "Raul">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="../../vendor/twbs/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../vendor/twbs/bootstrap/dist/css/bootstrap.css">
 
 
 </head>
@@ -65,8 +50,8 @@ $banco->save();
         <br>
         <br>
         <br>
-        <form  method="POST" action="AgregarBanco.php">
-        <h3 class="text-center">LOGIN</h3>
+        <form  method="POST" action="./agregar">
+        <h3 class="text-center">Agrega un banco al sistema</h3>
         <div class="form-group ">
             <label for="nombre_banco">nombre del banco</label>
             <input type="text" class="form-control" name="nombre_banco" id="" placeholder="coloca nombre">

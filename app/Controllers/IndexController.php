@@ -5,7 +5,7 @@ namespace App\Controllers;
 class IndexController{
 
 public function indexAction(){
-echo 'indexaction';
+include "../views/indexView.php";
 
 }
 
