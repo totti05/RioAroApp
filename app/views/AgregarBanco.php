@@ -1,8 +1,9 @@
 <?php 
 namespace App\views;
 
+use App\Models\banco;
 if(!empty($_POST)){
-$banco = new Banco();
+$banco = new banco();
 $banco->nombre_banco = $_POST['nombre_banco'];
 $banco->rif = $_POST['rif'];
 $banco->save();

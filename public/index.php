@@ -9,6 +9,7 @@ error_reporting(E_ALL);
 require_once("../vendor/autoload.php");
 
 use Illuminate\Database\Capsule\Manager as Capsule;
+use Aura\Router\RouterContainer;
 
 $capsule = new Capsule;
 
@@ -36,7 +37,20 @@ $request = Zend\Diactoros\ServerRequestFactory::fromGlobals(
     $_COOKIE,
     $_FILES
 );
-var_dump($request->getUri()->getPath());
 
+$routerContainer = new RouterContainer();
+$map = $routerContainer->getMap();
+$map->get('index', '/RioAroApp/', '../index.php');
+$map->get('agregarBanco', '/RioAroApp/banco/agregar','../agregarBanco.php');
 
+$matcher = $routerContainer->getMatcher();
+
+$route = $matcher->match($request);
+
+if(!$route){
+
+    echo 'no route';
+}
+
+var_dump($route);
 ?>
