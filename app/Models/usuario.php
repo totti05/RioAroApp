@@ -1,6 +1,6 @@
 <?php
 
-namespace RioAroApp\Models;
+namespace App\Models;
 
 class Usuario {
 
