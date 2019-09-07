@@ -61,7 +61,7 @@
             <input type="text" class="form-control" name="rif" id="" placeholder="coloca RIF">
         </div>
         
-        <button class="btn btn-secondary" role="button" type="submit">iniciar sesion</button>
+        <button class="btn btn-secondary" role="button" type="submit">guardar banco</button>
         </form>
     </div>
     <div class="col-md-4"> 

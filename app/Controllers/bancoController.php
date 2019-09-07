@@ -1,20 +1,24 @@
 <?php
 namespace App\Controllers;
-use App\Models\banco;
+use App\Models\bancoModel;
+
 class BancoController {
 
     public function getAgregarBancoAction(){
-    
 
-        if(!empty($_POST)){
-        $banco = new banco();
-        $banco->nombre_banco = $_POST['nombre_banco'];
-        $banco->rif = $_POST['rif'];
+        include '../views/agregarBancoView.php';
+
+    }
+    public function postAgregarBancoAction($request){
+        
+        if($request->getMethod() == 'POST'){
+        $banco = new bancoModel();
+        $postData = $request->getParsedBody();
+        $banco->nombre_banco = $postData['nombre_banco'];
+        $banco->rif = $postData['rif'];
         $banco->save();
-
         }
-
-        include '../views/agregarBanco.php';
+        include '../views/agregarBancoView.php';
 
     }
 }

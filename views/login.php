@@ -1,7 +1,3 @@
-<?php 
-namespace App\views;
-?>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -57,7 +53,7 @@ namespace App\views;
         <form   action="login.php">
         <h3 class="text-center">LOGIN</h3>
         <div class="form-group ">
-            <label for="nombre">nombre</label>
+            <label for="username">Username</label>
             <input type="text" class="form-control" name="nombre" id="" placeholder="coloca nombre">
         </div>
         <div class="form-group">

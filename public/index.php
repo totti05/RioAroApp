@@ -53,6 +53,12 @@ $map->get('agregarBanco', '/RioAroApp/banco/agregar', [
     'action'  => 'getAgregarBancoAction'
 ]);
 
+$map->post('guardarBanco', '/RioAroApp/banco/agregar', [
+    'controller' => $bancoController, 
+    'action'  => 'postAgregarBancoAction'
+]);
+
+
 $matcher = $routerContainer->getMatcher();
 
 $route = $matcher->match($request);
@@ -66,7 +72,7 @@ if(!$route){
     $actionName = $handlerData['action'];
     
     $controller = new $controllerName;
-    $controller->$actionName();
+    $controller->$actionName($request);
     
 }
 

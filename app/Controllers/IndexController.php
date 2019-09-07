@@ -4,9 +4,13 @@ namespace App\Controllers;
 
 class IndexController{
 
-public function indexAction(){
-include "../views/indexView.php";
+    public function indexAction($request){
+        if($request->getMethod() == 'GET'){
 
-}
+            include "../views/indexView.php";
+        }
+        
+
+    }
 
 }
