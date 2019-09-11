@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="es">
+  <head>
+		<!-- Required meta tags -->
+		<meta autor = "Raul">
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.css">
+		{# Optional Stylesheets #}
+		{% block stylesheets %}
+
+		{% endblock %}
+
+		<title>
+			{# Titulo de las paginas #}
+			{% block tittle %}{% endblock %}
+		</title>
+  </head>
+  {% block body %}
+  <body>
+
+		{% block headerbody %}
+		<header>
+			{#Esta es la cabecera de una página o un bloque de contenido#}
+			{% block navbar %}
+				<nav class="navbar fixed-top navbar-expand-md navbar-light bg-light">
+						<a class="navbar-brand" href="/index">RioAroApp</a>
+						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+						</button>
+
+						<div class="collapse navbar-collapse" id="navbarSupportedContent">
+						<ul class="navbar-nav mr-auto">
+							<li class="nav-item active">
+							<a class="nav-link" href="#top">Home <span class="sr-only">(current)</span></a>
+							</li>
+							<li class="nav-item">
+							<a class="nav-link" href="./calculadora.html">Calculadora</a>
+							</li>
+							<li class="nav-item">
+							<a class="nav-link " href="./tasas.html">Tasas</a>
+							</li>
+						</ul>
+						<form class="form-inline my-2 my-lg-0">
+							<a id="btn_registro" class="btn btn-outline-success active" href="./registro.html" role="button">Registrarse</a>
+							<a id="btn_login" class="btn btn-outline-success" href="./login.html" role="button">Iniciar Sesión</a>
+						</form>
+						</div>
+				</nav>
+			{% endblock %}
+		</header>
+		{% endblock %}	
+		<main>
+		{# contenido de las paginas #}
+		{% block mainbody %}
+			<section>
+			{#Esta es una sección de contenido del bloque principal (MAIN)#}
+			{% block section1 %}
+				<article>
+				{#Esto es un artículo del sitio#}
+				{% block article1 %}
+				{% endblock %}
+				</article>
+			{% endblock %}
+			</section>
+		{% endblock %}
+		</main>
+		<aside>
+		{% block sidebar %}
+		
+		{% endblock %}
+		</aside>
+		<footer>
+		{% block footer %}
+			{#Esto es un pie de página#}
+		
+		{% endblock %}
+			
+		</footer>
+
+  		
+
+		{# Optional JavaScript #} 
+		
+		{% block scripts %} 		{% endblock %}
+
+		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+		<script src="assets/jquery-3.3.1.min.js" ></script>
+		<script src="assets/popper.js"></script>
+		<script src="assets/bootstrap/js/bootstrap.js"></script>
+  </body>
+  {% endblock %}
+</html>
+

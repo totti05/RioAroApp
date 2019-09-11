@@ -2,11 +2,11 @@
 namespace App\Controllers;
 use App\Models\bancoModel;
 
-class BancoController {
+class BancoController extends baseController{
 
     public function getAgregarBancoAction(){
 
-        include '../views/agregarBancoView.php';
+        return $this->renderHTML('agregarBancoView.twig');
 
     }
     public function postAgregarBancoAction($request){
@@ -18,7 +18,7 @@ class BancoController {
         $banco->rif = $postData['rif'];
         $banco->save();
         }
-        include '../views/agregarBancoView.php';
+        return $this->renderHTML('agregarBancoView.twig');
 
     }
 }

@@ -2,12 +2,12 @@
 
 namespace App\Controllers;
 
-class IndexController extends baseController {
+class indexController extends baseController {
 
     public function indexAction($request){
         if($request->getMethod() == 'GET'){
             
-            echo $this->renderHTML("../views/indexView.twig"); 
+            return $this->renderHTML('indexView.twig'); 
         }
         
 
