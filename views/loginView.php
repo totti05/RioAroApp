@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Dashboard</title>
+    <title>Login - Rio Aro App</title>
     <meta charset="utf-8">
     <meta autor = "Raul">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -43,7 +43,7 @@
     <!-- Example row of columns -->
 <div class="row">
     <div class="col-md-4">
-        
+        <h1>hola login view</h1>
     </div>
     <div class="col-md-4 container">
         <br>
