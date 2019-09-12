@@ -2,12 +2,12 @@
 
 namespace App\Controllers;
 
-class loginController{
+class loginController extends baseController{
 
     public function getLoginAction($request){
         if($request->getMethod() == 'GET'){
 
-            include "../views/loginView.php";
+            return $this->renderHTML('loginView.twig'); 
         }
         
 
