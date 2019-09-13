@@ -1,0 +1,60 @@
+{# plantilla de vistas  #}
+{% extends "plantillaView.twig" %}
+
+{% block tittle %} 
+ Login - Rio Aro App
+{% endblock %}
+{% block stylesheets %}
+        <style>
+            #login{
+                
+            }
+
+            #contenido{
+            }
+            {
+                    
+            }
+            #cuadrologin{
+                background-color: rgba(255, 255, 255, 0.8);
+            }
+            #login img{
+                max-height: 80.5vh ;
+                object-fit: cover;
+               
+                
+            }
+            footer{
+                color: white;
+                
+            }
+
+
+        </style>
+{% endblock %}
+{% block content %}
+        <div class="card border-0 d-sm-none d-md-block " id="login">
+            <img class="card-img image-fluid" src="assets/img/loginbackground copia2.jpg" alt="background image">
+            <div class="card-img-overlay">
+                    <div class="row mt-5 mx-auto" id="contenido">
+                        <div class="< col-md-4 p-5 container border " id="cuadrologin">
+                            <form action="./login">
+                            <h3 class="text-center">LOGIN</h3>
+                            <div class="form-group ">
+                                <label for="username">Username</label>
+                                <input type="text" class="form-control" name="nombre" id="" placeholder="username">
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Password</label>
+                                <input type="text" class="form-control" name="password" id="" placeholder="Password">
+                                 <a href="#" class=""> ¿Olvidó su contraseña? </a>  
+                            </div>
+                            <div class="">
+                                <button class="btn btn-secondary" role="button" type="submit">iniciar sesion</button>
+                            </div>
+                            </form>
+                        </div>
+                </div>
+            </div>        
+        </div>
+{% endblock %}

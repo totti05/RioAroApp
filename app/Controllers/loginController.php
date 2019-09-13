@@ -7,7 +7,7 @@ class loginController extends baseController{
     public function getLoginAction($request){
         if($request->getMethod() == 'GET'){
 
-            return $this->renderHTML('loginView.twig'); 
+            return $this->renderHTML('contents/loginView.twig'); 
         }
         
 
