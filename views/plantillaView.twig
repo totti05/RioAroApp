@@ -19,7 +19,7 @@
 			{% block tittle %}{% endblock %}
 		</title>
   </head>
-  <body>
+  <body >
 		<header>
 			{#Esta es la cabecera de una página o un bloque de contenido#}
 			
@@ -49,16 +49,20 @@
 					</div>	
 				</nav>	
 		</header>	
-		<main class="container">
-		{# contenido de las paginas #}
-		{% block content %}
-			
-		{% endblock %} {# cierre mainbody #}
+		<main>
+		{% block mainbody %}
+			<section>
+			{# contenido de las paginas #}
+				{% block content %}
+					
+				{% endblock %} {# cierre section/content #}
+			</section>
+		{% endblock %}{# cierre main/mainbody #}
 		</main>
 		<hr>
-		<footer class="footer mt-auto py-3">
-			<div class="container text-center">
-					<span class="text-muted">Rio Aro App</span>
+		<footer class="mt-auto py-3 bg-transparent text-center" >
+				<div class="container ">
+						<span class="text-muted">Rio Aro App</span>
 				</div>
 		</footer>
 
