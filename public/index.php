@@ -47,9 +47,9 @@ $registroController = new registroController();
 $routerContainer = new RouterContainer();
 $map = $routerContainer->getMap();
 
-$map->get('index', '/RioAroApp/', [
+$map->get('home', '/RioAroApp/', [
     'controller' => $indexController, 
-    'action'  => 'indexAction'
+    'action'  => 'getHomeAction'
 ]);
 
 $map->get('login', '/RioAroApp/login', [

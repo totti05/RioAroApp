@@ -1,0 +1,85 @@
+{# plantilla de vistas  #}
+{% extends "plantillaView.twig" %}
+
+{% block stylesheets %}
+    <style>
+        #carousel img{
+
+            max-height: 70vh;
+            width: 100%;
+            object-fit: cover;
+        }
+        #cartas img{
+            max-height: 100px;
+            width: 100px;
+            object-fit: cover;
+
+        }
+    
+    </style>
+{% endblock %}
+
+{% block tittle %} 
+ Home - Rio Aro App
+{% endblock %}
+{% block mainbody %}
+         <section>
+                <div id="carousel" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#carousel" data-slide-to="1"></li>
+                        <li data-target="#carousel" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner" role="listbox">
+                        <div class="carousel-item active">
+                            <img src="assets/img/loginbackground copia.jpg" alt="First slide">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./assets/img/loginbackground copia2.jpg" alt="Second slide">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="assets/img/loginbackground.jpg" alt="Third slide">
+                        </div>
+                    </div>
+                </div>
+         </section>
+         <section class="row container mx-auto p-1">
+                <div class="card-group " id="cartas">
+                    <div class="card">
+                        <img class="card-img-top" src="./assets/img/loginbackground copia2.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h4 class="card-title">Title</h4>
+                            <p class="card-text">Non consectetur nulla laboris adipisicing amet ipsum sint reprehenderit nulla. Aute nisi proident sint aute ad labore do. Aliquip labore sint labore cupidatat duis in officia eiusmod dolore consequat non.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img class="card-img-top" src="./assets/img/loginbackground copia2.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h4 class="card-title">Title</h4>
+                            <p class="card-text">Dolore mollit eiusmod fugiat ea officia aliqua ullamco incididunt ad commodo eu. Aute minim irure laboris sunt reprehenderit anim voluptate est deserunt incididunt do dolor duis veniam. Dolore cupidatat velit fugiat ut. Occaecat eu ad ea magna ullamco deserunt excepteur culpa. Aliquip ad veniam consectetur et ut enim laborum velit culpa sint mollit minim.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img class="card-img-top" src="./assets/img/loginbackground copia2.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h4 class="card-title">Title</h4>
+                            <p class="card-text">Excepteur excepteur cillum laborum cillum duis sunt cillum do laborum cillum eiusmod. Deserunt elit ipsum ea sunt et. Ex nostrud adipisicing ex non laborum. Quis id ex magna id cillum aute officia.</p>
+                        </div>
+                    </div>
+                </div>
+         </section>
+         <section class="container mx-auto p-1">
+                <div class="card">
+                    <div class="card-header">
+                        Header
+                    </div>
+                    <div class="card-body">
+                        <h4 class="card-title">Title</h4>
+                        <p class="card-text">Mollit Lorem dolore nostrud minim Lorem minim excepteur. Culpa mollit irure ullamco aute qui eiusmod. Eu est minim consectetur nostrud velit sunt in ipsum laboris laborum deserunt id id ullamco. Reprehenderit ut voluptate non amet veniam. Sit ut voluptate laboris dolor. Veniam nulla commodo quis consequat velit dolor occaecat nisi enim ad laborum mollit.</p>
+                    </div>
+                    <div class="card-footer text-muted">
+                        Footer
+                    </div>
+                </div>
+         <section>   
+{% endblock %}
