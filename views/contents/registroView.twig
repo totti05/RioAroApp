@@ -36,26 +36,64 @@
         <div class="card border-0 d-sm-none d-md-block " id="login">
             <img class="card-img image-fluid" src="assets/img/loginbackground copia2.jpg" alt="background image">
             <div class="card-img-overlay">
-                    <div class="row mt-5 mx-auto" id="contenido">
-                        <div class="< col-md-4 p-5 container border " id="cuadrologin">
+                    <div class="row mt-3 mx-auto" id="contenido">
+                        <div class="< col-md-7 p-4 container border " id="cuadrologin">
                             <form action="./registro">
                                 <h3 class="text-center">REGISTER</h3>
-                                <div class="form-group ">
-                                    <label for="username">Username</label>
-                                    <input type="text" class="form-control" name="nombre" id="" placeholder="coloca nombre">
+                                <div class="row">
+                                     <div class="form-group col-md-4">
+                                        <label for="username ">Username</label>
+                                        <input type="text" class="form-control" name="nombre" id="" placeholder=" username"> 
+                                     </div>
+                                     <div class="form-group col">
+                                        <label for="correo">correo</label>
+                                        <input type="email" class="form-control" name="correo" id="" placeholder="correo">
+                                     </div> 
                                 </div>
-                                <div class="form-group">
-                                    <label for="apellido">apellido</label>
-                                    <input type="text" class="form-control" name="apellido" id="" placeholder="coloca apellido">
+                               
+                                <div class="row">
+                                    <div class="form-group col">
+                                    <label for="password">password</label>
+                                    <input type="password" class="form-control" name="password" id="" placeholder=" password">
                                 </div>
-                                <div class="form-group">
-                                    <label for="cedula">cedula</label>
-                                    <input type="text" class="form-control" name="cedula" id="" placeholder="coloca cedula">
+                                <div class="form-group col">
+                                    <label for="re-password">Re-password</label>
+                                    <input type="password" class="form-control" name="re-password" id="" placeholder="Re-password">
                                 </div>
-                                <div class="form-group">
-                                    <label for="correo">correo</label>
-                                    <input type="text" class="form-control" name="correo" id="" placeholder="coloca correo">
-                                </div>  
+                                </div>
+                                <div class="row">
+                                    <div class="form-group col">
+                                        <label for="nombre">nombre</label>
+                                        <input type="text" class="form-control" name="nombre" id="" placeholder="nombre">
+                                    </div>
+                                        <div class="form-group col">
+                                            <label for="apellido">apellido</label>
+                                            <input type="text" class="form-control" name="apellido" id="" placeholder="apellido">
+                                        </div>
+                                </div>
+                                <div class="row">
+                                    <div class="form-group col-md-3">
+                                        <label for="cedula">cedula</label>
+                                        <input type="text" class="form-control" name="cedula" id="" placeholder="V12345678">
+                                    </div>
+                                    <div class="form-group col-md-5">
+                                      <label for="">urbanización</label>
+                                      <input type="text" name="urbanizacion" id="" class="form-control" placeholder="urbanizacion" aria-describedby="helpId">
+                                    </div>
+                                    <div class="form-group col">
+                                      <label for="manzana">manzana</label>
+                                      <select class="form-control" name="manzana" id="">
+                                        <option>15</option>
+                                        <option>16</option>
+                                      </select>          
+                                    </div> 
+                                    <div class="form-group col">
+                                      <label for="casa">casa</label>
+                                      <input type="text" class="form-control" name="casa" id="" aria-describedby="helpId" placeholder="">
+                                    </div>
+                                </div>
+                                
+                                  
                                 <div class="align-items-center">
                                 <button class="btn btn-secondary" role="button" type="submit">iniciar sesion</button>
                                 </div>
@@ -80,7 +118,7 @@
 
 
 
-
+{#
 {% block content %}
     <div class="row pt-5 mt-5 pb-5 mb-5 d-flex justify-content-end">
         <div class="< col-md-4 mx-auto container border">
@@ -90,3 +128,4 @@
     </div>
  
 {% endblock %}
+#}

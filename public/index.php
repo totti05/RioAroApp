@@ -10,7 +10,7 @@ require_once("../vendor/autoload.php");
 
 use Illuminate\Database\Capsule\Manager as Capsule;
 use Aura\Router\RouterContainer;
-use App\Controllers\{indexController,bancoController,loginController};
+use App\Controllers\{indexController,bancoController,loginController,registroController};
 
 $capsule = new Capsule;
 
@@ -42,7 +42,7 @@ $request = Zend\Diactoros\ServerRequestFactory::fromGlobals(
 $indexController = new indexController();
 $bancoController = new bancoController();
 $loginController = new loginController();
-
+$registroController = new registroController();
 
 $routerContainer = new RouterContainer();
 $map = $routerContainer->getMap();
@@ -55,6 +55,11 @@ $map->get('index', '/RioAroApp/', [
 $map->get('login', '/RioAroApp/login', [
     'controller' => $loginController, 
     'action'  => 'getLoginAction'
+]);
+
+$map->get('registro', '/RioAroApp/registro', [
+    'controller' => $registroController, 
+    'action'  => 'getRegistroAction'
 ]);
 
 $map->get('agregarBanco', '/RioAroApp/banco/agregar', [
